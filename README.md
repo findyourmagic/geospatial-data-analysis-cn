@@ -1,43 +1,41 @@
-# Scipy 2018 Tutorial - Introduction to Geospatial Data Analysis with Python 
+# Scipy 2018 教程 - Python地理信息数据分析介绍
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/geopandas/scipy2018-geospatial-data/master)
 
-### Instructors
+### 导师
 
 - [Levi John Wolf](https://ljwolf.org) - [University of Bristol](http://www.bristol.ac.uk/geography/levi-j-wolf/overview.html)
 - Sergio Rey - [Center for Geospatial Sciences, University of California, Riverside](http://spatial.ucr.edu/peopleRey.html)
 - [Dani Arribas-Bel](http://darribas.org/) -  University of Liverpool
 - [Joris Van den Bossche](https://jorisvandenbossche.github.io/) - Université Paris-Saclay Center for Data Science 
 
-This tutorial is an introduction to geospatial data analysis in Python, with a focus on tabular vector data. It first focuses on introducing the participants to the different libraries to work with geospatial data and will cover munging geo-data and exploring relations over space. This includes importing data in different formats (e.g. shapefile, GeoJSON), visualizing, combining and tidying them up for analysis, and will use libraries such as `pandas`, `geopandas`, `shapely`, `PySAL`, or `rasterio`. The second part will build upon this and focus on more more advanced geographic data science and statistical methods to gain insight from the data. No previous experience with those geospatial python libraries is needed, but basic familiarity with geospatial data and concepts (shapefiles, vector vs raster data) and pandas will be helpful.
+本教程是关于使用Python分析地理信息数据的介绍, 主要聚焦于表格矢量数据. 它首先着重于介绍用于处理地理信息数据的各种包，也会涵盖地理数据的解析处理及其探索其在空间内的关系. 包括导入各种格式数据 (e.g. shapefile, GeoJSON), 可视化, 为了分析进行数据合并和数据清理, 还会学习使用这些包 `pandas`, `geopandas`, `shapely`, `PySAL`, 或 `rasterio`. 第二步会基于这个基础上聚焦于更加高级的地理数据科学和统计学方法洞察数据. 对于这些 Python 包的使用经验不是必须的, 但是了解基本的地理数据概念 (shapefiles, vector vs raster data) 以及了解 pandas 会帮助理解.
 
-## Outline of the Workshop
+## 日程
 
-- 7:50 - 8:20: **Installation & setup**
+- 7:50 - 8:20: **安装 & 配置**
 
-  If you cannot complete the installation instructions ahead of time, please come slightly early so we can work on ensuring everyone can get the required packages installed and so that you can run the workshop material & exercises
-
-- 8:20 - 9:00: **Working with spatial data**
+- 8:20 - 9:00: **处理地理信息数据**
 
   <!-- synthesize `01,04,05` -->
 
-- 9:00-10:00: **Spatial Relationships & Joins**
+- 9:00-10:00: **地理信息关系和连接**
 
   <!-- synthesize `02,03`, plus a very small bit of `99` -->
 
-- 10:00 - 10:10: **Break**
+- 10:00 - 10:10: **休息**
 
-- 10:10 - 11:00: **Exploratory spatial data analysis**
+- 10:10 - 11:00: **探索性地理数据分析**
 
   <!-- notebook `03,08` for profiles of clusters -->
 
-- 11:00 - 12:00: **Leveraging space in modeling**
+- 11:00 - 12:00: **使用空间模型**
 
   <!-- notebook `07`, basic feature engineering, kernel regression, & endog regression -->
 
-## Installation notes
+## 安装提示
 
-Following this tutorial will require recent installations of:
+本教程需要用到以下软件和包:
 
 - Python >= 3.5 (it will probably work on python 2.7 as well, but I didn't test it specifically)
 - pandas
@@ -51,41 +49,32 @@ Following this tutorial will require recent installations of:
 - geoplot
 - [Jupyter Notebook](http://jupyter.org)
 
-If you do not yet have these packages installed, we recommend to use the [conda](http://conda.pydata.org/docs/intro.html) package manager to install all the requirements 
-(you can install [miniconda](http://conda.pydata.org/miniconda.html) or install the (larger) Anaconda
-distribution, found at https://www.anaconda.com/download/).
+如果你还没装这些软件和包，我们推荐 [conda](http://conda.pydata.org/docs/intro.html) 包管理工具 
+(可以安装 [miniconda](http://conda.pydata.org/miniconda.html) 或者 (体积更大) Anaconda https://www.anaconda.com/download/).
 
-Once this is installed, the following command will install all required packages in your Python environment:
+装好 miniconda/anaconda 以后, 使用下面的命令安装所有依赖生成 Python 环境:
 
 ```
 conda env create -f environment.yml
 ```
 
-But of course, using another distribution (e.g. Enthought Canopy) or ``pip`` is fine as well (a requirements file is provided as well), as long as you have the above packages installed.
+当然其他发行版 (e.g. Enthought Canopy) 或者 ``pip`` 也行 (依赖文件也已提供), 只要你装好上面这些软件和包.
 
 
-## Downloading the tutorial materials
+## 下载教程素材
 
-**NOTE:** *We may update the materials up until the workshop. So, please make sure that, if you download the materials, you refresh the downloaded material close to the workshop.*
-
-If you have git installed, you can get the tutorial materials by cloning this repo:
+推荐通过克隆教程仓库下载素材:
 
     git clone https://github.com/geopandas/scipy2018-geospatial-data
 
-Otherwise, you can download the repository as a .zip file by heading over
-to the GitHub repository (https://github.com/geopandas/scipy2018-geospatial-data) in
-your browser and click the green "Download" button in the upper right:
 
-![](img/download-button.png)
+## 测试教程环境
 
-
-## Test the tutorial environment
-
-To make sure everything was installed correctly, open a terminal, and change its directory (`cd`) so that your working directory is the tutorial materials you downloaded in the step above. Then enter the following:
+为了确保所有安装都能正常运行, 打开命令行, 并且切换到教程文件目录下，然后运行以下命令:
 
 ```sh
 python check_environment.py
 ```
 
-Make sure that this scripts prints "All good. Enjoy the tutorial!"
+确保命令行打印出以下字样 "All good. Enjoy the tutorial!"
 
