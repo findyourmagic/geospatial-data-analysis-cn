@@ -13,8 +13,14 @@
 
 ## 目录
 
-[Python地理信息向量数据处理介绍](./01-introduction-geospatial-data.ipynb)
-
+1. [Python地理信息向量数据处理介绍](./01-introduction-geospatial-data.ipynb)
+1. [空间关系及操作](02-spatial-relationships-operations.ipynb)
+1. [空间连接](03-spatial-joins.ipynb)
+1. [地理信息数据可视化](04-more-on-visualization.ipynb)
+1. [地图分类](05-mapclassification.ipynb)
+1. [空间数据的探索性分析](06-exploratory-spatial-data-analysis.ipynb)
+1. [空间线性建模](07-data-borrowing.ipynb)
+1. [聚类](08-clustering.ipynb)
 
 ## 日程
 
@@ -70,7 +76,7 @@ conda env create -f environment.yml
 
 推荐通过克隆教程仓库下载素材:
 
-    git clone https://github.com/geopandas/scipy2018-geospatial-data
+    git clone https://github.com/findyourmagic/geospatial-data-analysis-cn
 
 
 ## 测试教程环境
