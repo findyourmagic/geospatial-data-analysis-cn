@@ -11,6 +11,11 @@
 
 本教程是关于使用Python分析地理信息数据的介绍, 主要聚焦于表格矢量数据. 它首先着重于介绍用于处理地理信息数据的各种包，也会涵盖地理数据的解析处理及其探索其在空间内的关系. 包括导入各种格式数据 (e.g. shapefile, GeoJSON), 可视化, 为了分析进行数据合并和数据清理, 还会学习使用这些包 `pandas`, `geopandas`, `shapely`, `PySAL`, 或 `rasterio`. 第二步会基于这个基础上聚焦于更加高级的地理数据科学和统计学方法洞察数据. 对于这些 Python 包的使用经验不是必须的, 但是了解基本的地理数据概念 (shapefiles, vector vs raster data) 以及了解 pandas 会帮助理解.
 
+## 目录
+
+[Python地理信息向量数据处理介绍](./01-introduction-geospatial-data.ipynb)
+
+
 ## 日程
 
 - 7:50 - 8:20: **安装 & 配置**
